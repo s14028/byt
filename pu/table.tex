@@ -1,0 +1,101 @@
+\documentclass[a4page]{article}
+
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\frenchspacing
+\usepackage{indentfirst}
+
+\begin{document}
+	\begin{table}
+		\begin{tabular}{|l|p{5cm}|}
+			\hline
+			Nazwa & Wyliczanie premii\\
+			\hline
+			Priorytet & Średni\\
+			\hline
+			Autorzy & Podsystem czasu\\
+			\hline
+			Opis & Raz w miesiącu podsystem czasu wylicza premie dla pracowników
+			na podstawie liczby zakończonych zamówień w ciągu miesiąca\\
+			\hline
+			Warunek początkowy & Nastał koniec miesiąca\\
+			\hline
+			Warunek końcowy & Jeśli pracownik spełnił warunki otrzymania premii, została mu ona doliczona do miesięcznego zarobku\\
+			\hline
+			Główny przepływ zdarzeń &
+			1. Uruchamia się system podczasu.
+			\newline
+			2. System wylicza pracownikowi premię na podstawie funkcji: $f(x, y) = 0.01 * x * y$
+			\newline
+			Gdzie $x$ --- ilość zrealizowanych zamówień, a $y$ --- wynagrodzenie pracownika.
+			\newline
+			3. System dolicza wynik funkcji do wynagrodzenia pracownika.\\
+			\hline
+			Alternatywne przepływy zdarzeń & Brak.\\
+			\hline
+			Wymagania niefunkcjonalne & Brak.\\
+			\hline
+		\end{tabular}
+		\caption{P.U. ,,Wyliczanie premii''}
+	\end{table}
+
+	\begin{table}
+		\begin{tabular}{|l|p{5cm}|}
+			\hline
+			Nazwa & Backup bazy danych\\
+			\hline
+			Priorytet & Wysoki\\
+			\hline
+			Autorzy & Podsystem czasu\\
+			\hline
+			Opis & Raz w miesiącu podsystem czasu wykonujes backup bazy danych\\
+			\hline
+			Warunek początkowy & Nastał koniec miesiąca\\
+			\hline
+			Warunek końcowy & Stan bazy danych za ostatni miesiąc został wgrany na dysk\\
+			\hline
+			Główny przepływ zdarzeń &
+			1. Uruchamia się system podczasu.
+			\newline
+			2. System backup'uje stan bazy danych na dysk.\\
+			\hline
+			Alternatywne przepływy zdarzeń & Brak.\\
+			\hline
+			Wymagania niefunkcjonalne & Brak.\\
+			\hline
+		\end{tabular}
+		\caption{P.U. ,,Backup bazy danych''}
+	\end{table}
+
+	\begin{table}
+		\begin{tabular}{|l|p{5cm}|}
+			\hline
+			Nazwa & Przygotowanie raportów\\
+			\hline
+			Priorytet & Średni\\
+			\hline
+			Autorzy & Podsystem czasu\\
+			\hline
+			Opis & Raz w miesiącu podsystem czasu sporządza raport\\
+			\hline
+			Warunek początkowy & Nastał koniec miesiąca\\
+			\hline
+			Warunek końcowy & Raport został sporządzony\\
+			\hline
+			Główny przepływ zdarzeń &
+			1. Uruchamia się system podczasu.
+			\newline
+			2. System sporządza raport dostępności instrumentów.
+			\newline
+			3. System sporządza raport dochodów ze sprzedaży instrumentów.\\
+			\hline
+			Alternatywne przepływy zdarzeń & Brak.\\
+			\hline
+			Wymagania niefunkcjonalne & Brak.\\
+			\hline
+		\end{tabular}
+		\caption{P.U. ,,Przygotowanie raportów''}
+	\end{table}
+\end{document}
